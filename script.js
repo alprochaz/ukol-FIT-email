@@ -28,3 +28,15 @@ const studentEmail = `
 document.body.innerHTML += studentEmail
 
 // Proc nefunguje tohle: document.body.innerHTML += studentEmail.style.color = "blue"
+
+// Hodnoceni koucky: Ahoj, Riešenie moc chválim, všetko funguje ako má a aj kód je napísaný prehľadne a správne :) 
+// A neviem, či už sa ti to podarilo rozriešiť, ale vyjadrím sa ku komentáru: 'Proc nefunguje tohle: 
+// document.body.innerHTML += studentEmail.style.color = "blue"' - studentEmail aby si naň vedela pridať štýly, musí byť premenná 
+// vytvorená pomocou querySelectoru (tak sa vyberie z HTML, teda musi v HTML predtým existovať). Takže vytvorit element v HTML, 
+// dať class/id, pomocou toho vybrať v JS a uložiť do novej premennej a potom tejto premennej pridať štýly :) 
+// Úkol značím ako hotovo, dobrá práca!
+
+// takhle uz funguje (v HTML pridan p s ID yourEmail):
+const elYourEmail = document.querySelector("#yourEmail")
+elYourEmail.innerHTML = "Druhe reseni:" + studentEmail
+elYourEmail.style.color ="blue"
